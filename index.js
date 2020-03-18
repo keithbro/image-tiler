@@ -4,4 +4,4 @@
  */
 
 const fs = require('fs').promises;
-require('./lib/egyptian')({ fs });
+require('./lib/app')({ fs });
