@@ -33,10 +33,6 @@ describe('extractor', () => {
       it("writes the expected file", () => {
         expect(fakeImage.toFile.args).to.deep.equal([['output/0/0_0.jpg']])
       });
-
-      it("returns the return values from toFile", () => {
-        expect(result).to.deep.equal([[{ success: true }]])
-      });
     });
   });
 });
