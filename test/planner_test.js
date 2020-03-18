@@ -86,9 +86,10 @@ describe('planner', () => {
       const pyramid = calculatePyramid({ width: 7000, height: 5000 });
 
       it("has 14 levels of zoom", () => expect(pyramid.levels.length).to.equal(14));
+      
       it("level 10 has 4x3 tiles", () => {
-        expect(pyramid.levels[3].level).to.equal(10);
-        expect(pyramid.levels[3].tiles).to.deep.equal(
+        expect(pyramid.levels[10].level).to.equal(10);
+        expect(pyramid.levels[10].tiles).to.deep.equal(
           [
             { x: 0, y: 0, left: 0, top: 0, width: 256, height: 256 },
             { x: 0, y: 1, left: 0, top: 256, width: 256, height: 256 },
