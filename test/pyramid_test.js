@@ -2,14 +2,13 @@ const { expect } = require('chai');
 const { levels } = require('../lib/pyramid');
 
 describe('.levels', () => {
-  it('returns an array of the levels for an image', () => {
-    const image = { width: 1000, height: 1000 };
+  describe("when the image is the size of one tile", () => {
+    const image = { width: 256, height: 256 };
 
-    expect(levels(image)).to.equal([
-      { width: 1000, height: 1000 },
-      { width: 500, height: 250 },
-      { width: 500, height: 250 },
-      { width: 500, height: 250 },
-    ]);
+    it('returns an array of the levels', () => {
+      expect(levels(image)).to.deep.equal([
+        { zoom: 0, tiles: [{ x: 0, y: 0, width: 256, height: 256 }] },
+      ]);
+    });
   });
 });
