@@ -12,6 +12,7 @@ describe('extractor', () => {
         fakeImage = { toFile: fake.resolves({ success: true }) };
         fakeImage.extract = fake.returns(fakeImage);
         fakeImage.resize = fake.returns(fakeImage);
+        fakeImage.clone = fake.returns(fakeImage);
         fakeFs = { mkdir: fake.resolves() };
 
         const service = extractor(fakeFs);

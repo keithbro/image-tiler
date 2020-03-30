@@ -15,10 +15,6 @@ npm start Cat.jpg
 
 Node v12 or higher.
 
-Note that on v13.3.0 I've seen a segmentation fault that occurs after the images
-have been extracted. The app was developed and tested using Node LTS (v12.16.1
-at the time of writing).
-
 ## Tests
 
 Test have been created under `tests/`. To run:
